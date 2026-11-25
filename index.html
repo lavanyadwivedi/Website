@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumen — Ship beautiful websites faster</title>
+    <meta name="description" content="Lumen helps teams design, build and launch fast, animated websites." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="nav">
+      <a href="#" class="logo"><span class="logo-mark"></span>Lumen</a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#stats">Results</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <a href="#cta" class="btn btn-small">Get started</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="orb orb-a" aria-hidden="true"></div>
+        <div class="orb orb-b" aria-hidden="true"></div>
+        <p class="eyebrow reveal">New · Version 2.0 is here</p>
+        <h1 class="hero-title">
+          <span class="word">Ship</span> <span class="word">beautiful</span>
+          <span class="word">websites</span> <span class="word gradient">faster.</span>
+        </h1>
+        <p class="hero-sub reveal">
+          Design, build and launch fast, fluid websites with your team — no hand-off, no friction, just
+          great work going live.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#cta" class="btn">Start free trial</a>
+          <a href="#features" class="btn btn-ghost">See how it works</a>
+        </div>
+        <div class="hero-card reveal" aria-hidden="true">
+          <div class="window-bar"><i></i><i></i><i></i></div>
+          <div class="mock">
+            <div class="mock-side">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="mock-main">
+              <div class="mock-hero"></div>
+              <div class="mock-row"><span></span><span></span><span></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="logos" aria-label="Trusted by">
+        <p>Trusted by fast-moving teams</p>
+        <div class="marquee">
+          <div class="marquee-track">
+            <span>Northwind</span><span>Acme</span><span>Globex</span><span>Initech</span>
+            <span>Umbrella</span><span>Hooli</span><span>Stark</span><span>Wayne</span>
+            <span aria-hidden="true">Northwind</span><span aria-hidden="true">Acme</span>
+            <span aria-hidden="true">Globex</span><span aria-hidden="true">Initech</span>
+            <span aria-hidden="true">Umbrella</span><span aria-hidden="true">Hooli</span>
+            <span aria-hidden="true">Stark</span><span aria-hidden="true">Wayne</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="section-head in-view">
+          <p class="eyebrow">Features</p>
+          <h2>Everything you need to launch</h2>
+          <p class="muted">From first sketch to production, Lumen keeps your whole team in one place.</p>
+        </div>
+        <div class="grid features">
+          <article class="card feature">
+            <div class="icon">⚡</div>
+            <h3>Instant publishing</h3>
+            <p>Go live in one click on a global edge network with automatic SSL.</p>
+          </article>
+          <article class="card feature">
+            <div class="icon">✦</div>
+            <h3>Fluid animations</h3>
+            <p>Springs, scroll effects and gestures built in — smooth on every device.</p>
+          </article>
+          <article class="card feature">
+            <div class="icon">◎</div>
+            <h3>Real-time collaboration</h3>
+            <p>Edit together with live cursors, comments and version history.</p>
+          </article>
+          <article class="card feature">
+            <div class="icon">▲</div>
+            <h3>Built-in SEO</h3>
+            <p>Clean semantic markup, meta tags and sitemaps generated for you.</p>
+          </article>
+          <article class="card feature">
+            <div class="icon">◐</div>
+            <h3>Design systems</h3>
+            <p>Shared components and tokens keep every page on brand.</p>
+          </article>
+          <article class="card feature">
+            <div class="icon">⬡</div>
+            <h3>Integrations</h3>
+            <p>Connect analytics, forms, CMS and payments in minutes.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="stats" class="section stats">
+        <div class="stat in-view"><strong data-count="12000" data-suffix="+">0</strong><span>Sites launched</span></div>
+        <div class="stat in-view"><strong data-count="99.99" data-decimals="2" data-suffix="%">0</strong><span>Uptime</span></div>
+        <div class="stat in-view"><strong data-count="3" data-suffix="×">0</strong><span>Faster shipping</span></div>
+        <div class="stat in-view"><strong data-count="48" data-suffix="ms">0</strong><span>Median load time</span></div>
+      </section>
+
+      <section id="pricing" class="section">
+        <div class="section-head in-view">
+          <p class="eyebrow">Pricing</p>
+          <h2>Simple plans that scale with you</h2>
+          <div class="toggle" role="radiogroup" aria-label="Billing period">
+            <span class="toggle-pill" aria-hidden="true"></span>
+            <button role="radio" aria-checked="true" data-period="monthly">Monthly</button>
+            <button role="radio" aria-checked="false" data-period="yearly">Yearly <em>−20%</em></button>
+          </div>
+        </div>
+        <div class="grid pricing">
+          <article class="card plan">
+            <h3>Starter</h3>
+            <p class="price"><span data-monthly="0" data-yearly="0">$0</span><small>/mo</small></p>
+            <ul><li>1 website</li><li>Lumen subdomain</li><li>Community support</li></ul>
+            <a href="#cta" class="btn btn-ghost">Start free</a>
+          </article>
+          <article class="card plan featured">
+            <p class="badge">Most popular</p>
+            <h3>Pro</h3>
+            <p class="price"><span data-monthly="24" data-yearly="19">$24</span><small>/mo</small></p>
+            <ul><li>10 websites</li><li>Custom domains</li><li>Advanced animations</li><li>Priority support</li></ul>
+            <a href="#cta" class="btn">Start trial</a>
+          </article>
+          <article class="card plan">
+            <h3>Team</h3>
+            <p class="price"><span data-monthly="79" data-yearly="63">$79</span><small>/mo</small></p>
+            <ul><li>Unlimited websites</li><li>Roles &amp; permissions</li><li>SSO &amp; audit logs</li></ul>
+            <a href="#cta" class="btn btn-ghost">Contact sales</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="cta" class="section cta in-view">
+        <h2>Ready to build something great?</h2>
+        <p class="muted">Start free today. No credit card required.</p>
+        <form class="cta-form" onsubmit="event.preventDefault(); this.classList.add('sent')">
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" type="email" placeholder="you@company.com" required />
+          <button class="btn" type="submit">Get started</button>
+          <p class="thanks" role="status">Thanks! Check your inbox.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 Lumen</span>
+      <nav aria-label="Footer"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Contact</a></nav>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
