@@ -48,7 +48,20 @@ const K = [
 const seal =
     '<svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="15" r="11" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 15l3.5 3.5L22 12" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M11 24l-2 8 8-3 8 3-2-8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>'
 
+const F = [
+    { t: "trend remix", c: "A trending audio with a brand twist.", goal: "reach", g: "linear-gradient(165deg,#c9a467,#6f5426)" },
+    { t: "poll & quiz", c: "Interactive stories that turn views into leads.", goal: "leads", g: "linear-gradient(165deg,#7c8650,#2f3820)" },
+    { t: "myth vs fact", c: "Carousels that build trust and get saved.", goal: "trust", g: "linear-gradient(165deg,#a3a37a,#4b5733)" },
+    { t: "behind the scenes", c: "Real people and process, unpolished on purpose.", goal: "trust", g: "linear-gradient(165deg,#5c6a3a,#1f2615)" },
+    { t: "haul & try-on", c: "The product in real life, ready to buy.", goal: "sales", g: "linear-gradient(165deg,#b9895a,#5a3e22)" },
+    { t: "tips in 15s", c: "Quick value that earns the follow.", goal: "reach", g: "linear-gradient(165deg,#8d9660,#4b5733)" },
+]
+
 // ---------- Render ----------
+$("#phones").innerHTML = F.map(
+    (x) =>
+        `<article class="phone" style="background:${x.g}"><div class="ph-top"><span class="av">ld</span>lavanya</div><div class="side" aria-hidden="true"><span>♥</span><span>✎</span><span>➤</span></div><div class="txt"><span class="goal">goal: ${x.goal}</span><div class="big">${x.t}</div><div class="cap">${x.c}</div></div></article>`
+).join("")
 const tl = $("#tl")
 tl.innerHTML = T.map(
     (x, i) =>
@@ -265,6 +278,39 @@ inView(
     { amount: 0.3 }
 )
 
+// ---------- Services, process, formats ----------
+inView(
+    ".svcs",
+    (grid) => {
+        if (reduce) return
+        animate($$(".svc", grid), { opacity: [0, 1], y: [40, 0] }, { delay: stagger(0.08), ...spring })
+        animate($$(".svc .num", grid), { x: [-14, 0] }, { delay: stagger(0.08, { startDelay: 0.2 }), ...snappy })
+    },
+    { amount: 0.15 }
+)
+
+inView(
+    ".process",
+    (el) => {
+        if (reduce) return
+        animate($$(".step", el), { opacity: [0, 1], y: [24, 0] }, { delay: stagger(0.15), ...spring })
+        animate($$(".dotn", el), { scale: [0.4, 1] }, { delay: stagger(0.15), type: "spring", bounce: 0.5, visualDuration: 0.5 })
+        animate($(".pline i", el), { scaleX: [0, 1] }, { duration: 1.1, ease: "easeInOut", delay: 0.1 })
+    },
+    { amount: 0.4 }
+)
+
+inView(
+    "#phones",
+    (grid) => {
+        if (reduce) return
+        $$(".phone", grid).forEach((ph, i) =>
+            animate(ph, { opacity: [0, 1], y: [60, 0], rotate: [i % 2 ? 4 : -4, 0] }, { ...spring, delay: i * 0.07 })
+        )
+    },
+    { amount: 0.15 }
+)
+
 // ---------- Hover & press feedback ----------
 if (!reduce) {
     hover(".case, .sk, .item", (el) => {
@@ -275,6 +321,14 @@ if (!reduce) {
             animate(el, { y: 0 }, snappy)
             if (big) animate(big, { scale: 1 }, snappy)
         }
+    })
+    hover(".svc", (el) => {
+        animate(el, { y: -6 }, snappy)
+        return () => animate(el, { y: 0 }, snappy)
+    })
+    hover(".phone", (el) => {
+        animate(el, { y: -10, rotate: -1.5, scale: 1.03 }, snappy)
+        return () => animate(el, { y: 0, rotate: 0, scale: 1 }, snappy)
     })
     hover(".chip", (el) => {
         animate(el, { y: -2 }, snappy)
